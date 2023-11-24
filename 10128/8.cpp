@@ -17,12 +17,12 @@ void algorithm(int* array, int size)
 	{
 		for (int j = size - 1; j > i; --j)
 		{
-			if (array[i] > array[i + 1])
+			if (array[j - 1] > array[j])
 			{
 				int empty = 0;
-				empty = array[i];
-				array[i] = array[i + 1];
-				array[i + 1] = empty;
+				empty = array[j - 1];
+				array[j - 1] = array[j];
+				array[j] = empty;
 			}
 		}
 	}
